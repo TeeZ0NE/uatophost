@@ -1,0 +1,26 @@
+ @import  '../_colors'
+.tooltip-inner
+  color: color_main_light
+  background-color: bgc_dark_lighten
+  box-shadow: shadow
+  &:before 
+    border-color: transparent
+    
+.tooltip.bs-tether-element-attached-right .tooltip-inner::before,
+.tooltip.tooltip-left .tooltip-inner::before
+  border-left-color: bgc_dark_lighten
+
+
+.tooltip.bs-tether-element-attached-bottom .tooltip-inner::before,
+.tooltip.tooltip-top .tooltip-inner::before
+  border-top-color: bgc_dark_lighten
+ 
+
+.tooltip.bs-tether-element-attached-top .tooltip-inner::before,
+.tooltip.tooltip-bottom .tooltip-inner::before
+  border-bottom-color: bgc_dark_lighten
+
+.tooltip.bs-tether-element-attached-left .tooltip-inner::before,
+.tooltip.tooltip-right .tooltip-inner::before
+  border-right-color: bgc_dark_lighten
+
