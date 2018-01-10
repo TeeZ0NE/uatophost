@@ -3,8 +3,46 @@
 @section('title','index page')
 @section('description','myDescription')
 @section('keywords','myKeyWords')
+@section('left')
+@component('layouts.parts.components.side_block_rate',
+['hosters'           => $top_hosters_summary,
+'side_block_classes' => NULL,
+'side_block_title'   => 'top hosters',
+'header_class'       => 'top-of-raitings',
+'button_param'       => [
+'button_caption'     => 'button_caption',
+'button_link'        => 'button_link_url',
+'tooltip_title'      => 'hint',
+'tooltip_placement'  => 'right'
+]
+])
+@endcomponent
 
-@section('content')
-   <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus illo repellat at fugit corporis, inventore recusandae vel excepturi est sequi iusto provident aperiam, aut deleniti officia sint alias ipsum repellendus odit. Incidunt ullam illo architecto, laudantium voluptates, quis dignissimos ex nemo porro explicabo magni adipisci cum. Accusantium, natus est enim!
-   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eligendi, eius tempore repellat esse, impedit facilis. Quod a ut dolore, aliquid enim commodi, quae consequuntur voluptas numquam ipsa odio expedita vel mollitia, atque dolores quos saepe. Deserunt distinctio nisi natus quisquam necessitatibus, totam blanditiis dolore ipsum, autem officia. Voluptatem cum amet, alias nisi! Nisi consequuntur provident, at numquam maiores suscipit, vel et, iste itaque ea quaerat perferendis laborum recusandae, expedita sunt similique animi ut. Vero cum provident unde fugiat necessitatibus expedita optio, vitae modi sint aut voluptatum recusandae officiis ducimus distinctio fuga sequi quos debitis odio. Est, praesentium eos ad quia ea debitis quas sed modi consectetur aut, minus, fuga iusto facilis quo pariatur nulla error officia non molestiae sunt dolore? Totam, consequuntur autem explicabo cumque. Assumenda vitae, blanditiis incidunt voluptatibus beatae, voluptates, quo, doloremque quisquam officiis eaque maiores praesentium porro dicta! Asperiores deserunt, laborum ratione eos. Magni, tenetur. Officia saepe similique possimus officiis eveniet, dolore, temporibus et praesentium velit sint delectus in ad molestiae. Error culpa, velit cumque suscipit blanditiis doloribus laborum officiis expedita, illo facere exercitationem a magnam cum fuga obcaecati eius esse commodi, debitis, soluta ipsa adipisci amet numquam. Adipisci hic beatae velit at architecto fugiat est, eveniet tempore aliquid a! Exercitationem harum quidem suscipit, tempore, illum neque ipsum, et quo voluptatem animi natus ratione quas enim earum nostrum nihil! Consequatur amet ab esse provident repudiandae, reprehenderit aperiam blanditiis nam facilis magni quisquam, doloribus ex non, nemo inventore! Quia porro excepturi laudantium ea sed nisi quaerat repudiandae illum! Atque, tenetur. Aspernatur veniam mollitia, officiis facilis optio! Veniam ad corporis id architecto unde, natus sit ut, reiciendis mollitia dolores quae nam, placeat facere quas quibusdam. Tenetur tempora sit deserunt veritatis rem accusamus, ex reiciendis minima architecto quos non assumenda quibusdam pariatur laboriosam a quis blanditiis! Iure, facilis, reprehenderit!</div>
+@component('layouts.parts.components.side_block_rate',
+['hosters'           => $top_hosters_by_region_uk,
+'side_block_classes' => NULL,
+'side_block_title'   => 'top hosters of ua',
+'header_class'       => 'top-of-raitings',
+'button_param'       => [
+'button_caption'     => 'button_caption',
+'button_link'        => 'button_link_url',
+'tooltip_title'      => 'hint',
+'tooltip_placement'  => 'right'
+]
+])
+@endcomponent
+@component('layouts.parts.components.side_block_rate',
+['hosters'           => $top_hosters_by_region_ru,
+'side_block_classes' => NULL,
+'side_block_title'   => 'top hosters of ru',
+'header_class'       => 'top-of-raitings',
+'button_param'       => [
+'button_caption'     => 'button_caption',
+'button_link'        => 'button_link_url',
+'tooltip_title'      => 'hint',
+'tooltip_placement'  => 'right'
+]
+])
+@endcomponent
+  
 @endsection

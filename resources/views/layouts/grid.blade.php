@@ -13,7 +13,14 @@
   {{-- header --}}
   @include('layouts.parts.header.header')
   {{-- main content --}}
-  @section('content')@show
+
+<div class="container">
+  <div class="row">
+    <div class="col-3">@section('left')@show</div>
+    <div class="col">center</div>
+    <div class="col-3">right</div>
+  </div>
+</div>
   {{-- footer--}}
   @include('layouts.parts.footer.footer')
 
