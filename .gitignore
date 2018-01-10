@@ -11,3 +11,6 @@ npm-debug.log
 yarn-error.log
 .env
 .phpintel/
+npm-debug.log.*
+resources/assets/sql/*
+
