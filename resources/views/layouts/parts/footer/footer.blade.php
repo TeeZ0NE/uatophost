@@ -6,4 +6,10 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 </script>
-footer
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">Lorem ipsum.</div>
+    <div class="col">Lorem ipsum.</div>
+    <div class="col">Lorem ipsum.</div>
+  </div>
+</div>
