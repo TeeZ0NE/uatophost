@@ -24,7 +24,10 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+       "files": [
+            "app/libs/url_slug.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
