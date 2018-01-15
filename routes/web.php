@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('/hosters/{hoster_url_slug?}','InfoAboutHosterController@getInfoAboutHoster');
