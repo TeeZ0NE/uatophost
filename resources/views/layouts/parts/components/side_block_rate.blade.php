@@ -12,7 +12,7 @@
   <p class="text-center {{ $header_class }}">{{ $side_block_title }}</p>
   <ul>
     @foreach ($hosters as $hoster)
-    <li><a href="{{ url("hosters/".url_slug($hoster->name, ["transliterate"=>true])) }}">{{ $hoster->name }}</a></li>
+    <li><a href="{{ url("hosters/".$hoster->url_slug) }}">{{ $hoster->name }}</a></li>
 
     @endforeach
   </ul>
