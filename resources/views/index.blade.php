@@ -7,12 +7,12 @@
   @component('layouts.parts.components.side_block_rate',
     ['hosters'           => $top_hosters_summary,
     'side_block_classes' => NULL,
-    'side_block_title'   => 'top 10 hosters',
+    'side_block_title'   => __('blockHeaders.top_hosters_summary',['num_of_hosters'=>10]),
     'header_class'       => 'top-of-raitings',
     'button_param'       => [
-    'button_caption'     => 'button_caption',
+    'button_caption'     => __('buttons.goto_hosting_rate'),
     'button_link'        => 'button_link_url',
-    'tooltip_title'      => 'hint',
+    'tooltip_title'      => __('buttons.hint_goto_hosting_rate'),
     'tooltip_placement'  => 'right'
     ]
     ])
@@ -21,12 +21,12 @@
   @component('layouts.parts.components.side_block_rate',
     ['hosters'           => $top_hosters_by_region_uk,
     'side_block_classes' => NULL,
-    'side_block_title'   => 'top 10 hosters of ua',
+    'side_block_title'   => __('blockHeaders.top_hosters_by_region_uk',['num_of_hosters'=>10]),
     'header_class'       => 'top-of-raitings',
     'button_param'       => [
-    'button_caption'     => 'button_caption',
+    'button_caption'     => __('buttons.goto_hosting_rate'),
     'button_link'        => 'button_link_url',
-    'tooltip_title'      => 'hint',
+    'tooltip_title'      => __('buttons.hint_goto_hosting_rate'),
     'tooltip_placement'  => 'right'
     ]
     ])
@@ -34,12 +34,12 @@
   @component('layouts.parts.components.side_block_rate',
     ['hosters'           => $top_hosters_by_region_ru,
     'side_block_classes' => NULL,
-    'side_block_title'   => 'top 10 hosters of ru',
+    'side_block_title'   => __('blockHeaders.top_hosters_by_region_ru',['num_of_hosters'=>10]),
     'header_class'       => 'top-of-raitings',
     'button_param'       => [
-    'button_caption'     => 'button_caption',
+    'button_caption'     => __('buttons.goto_hosting_rate'),
     'button_link'        => 'button_link_url',
-    'tooltip_title'      => 'hint',
+    'tooltip_title'      => __('buttons.hint_goto_hosting_rate'),
     'tooltip_placement'  => 'right'
     ]
     ])
@@ -47,12 +47,12 @@
   @component('layouts.parts.components.side_block_rate',
     ['hosters'           => $top_hosters_by_kind_vps,
     'side_block_classes' => NULL,
-    'side_block_title'   => 'top 10 hosters of vps',
+    'side_block_title'   => __('blockHeaders.top_hosters_by_kind_vps',['num_of_hosters'=>10]),
     'header_class'       => 'top-of-raitings',
     'button_param'       => [
-    'button_caption'     => 'button_caption',
+    'button_caption'     => __('buttons.goto_hosting_rate'),
     'button_link'        => 'button_link_url',
-    'tooltip_title'      => 'hint vps',
+    'tooltip_title'      => __('buttons.hint_goto_hosting_rate'),
     'tooltip_placement'  => 'right'
     ]
     ])
@@ -60,12 +60,12 @@
   @component('layouts.parts.components.side_block_rate',
     ['hosters'           => $top_hosters_by_kind_vds,
     'side_block_classes' => NULL,
-    'side_block_title'   => 'top5 hosters of vds',
+    'side_block_title'   => __('blockHeaders.top_hosters_by_kind_vds',['num_of_hosters'=>5]),
     'header_class'       => 'top-of-raitings',
     'button_param'       => [
-    'button_caption'     => 'button_caption',
+    'button_caption'     => __('buttons.goto_hosting_rate'),
     'button_link'        => 'button_link_url',
-    'tooltip_title'      => 'hint vds',
+    'tooltip_title'      => __('buttons.hint_goto_hosting_rate'),
     'tooltip_placement'  => 'right'
     ]
     ])
@@ -73,14 +73,15 @@
   @component('layouts.parts.components.side_block_rate',
     ['hosters'           => $top_hosters_by_kind_vps_server,
     'side_block_classes' => NULL,
-    'side_block_title'   => 'top5 hosters of vds server',
+    'side_block_title'   => __('blockHeaders.top_hosters_by_kind_vps_server',['num_of_hosters'=>5]),
     'header_class'       => 'top-of-raitings',
     'button_param'       => [
-    'button_caption'     => 'button_caption',
+    'button_caption'     => __('buttons.goto_hosting_rate'),
     'button_link'        => 'button_link_url',
-    'tooltip_title'      => 'hint vds server',
+    'tooltip_title'      => __('buttons.hint_goto_hosting_rate'),
     'tooltip_placement'  => 'right'
     ]
    ])
   @endcomponent
 @endsection
+
