@@ -7,4 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hoster extends Model
 {
+  public $primaryKey = 'hoster_id';
+  public function raiting(){
+    return $this->hasOne(Raiting::class,'hoster_id')->select('rait');
+  }
 }
