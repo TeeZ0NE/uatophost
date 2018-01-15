@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\IndexQueries;
+use App\Queries\IndexQueries;
 // include_once('./../../Libs/url_slug.php');
 // include_once('app_path()/Libs/test.php');
 

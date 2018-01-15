@@ -33,7 +33,7 @@ protected $kind;
 /**
  * gettin data from tables(hosters and raitings) to get max-count($limit) hosters with columns (name and hoster id)
  * @param  INT $limit max-count of hosters
- * @return Object        object with name
+ * @return Object        object with name  and url_slug
  */
 abstract protected function topHosters($limit);
 
@@ -41,7 +41,7 @@ abstract protected function topHosters($limit);
  * get array of topHosters from defined region
  * @param  String $region where hoster locate, exp. "UK" or "RU"
  * @param  Int $limit  max-count hosters in result
- * @return Object  object with name
+ * @return Object  object with name and url_slug
  */
 abstract protected function topHostersByRegion($region,$limit);
 
@@ -56,7 +56,7 @@ abstract protected function topHostersByKind($kind,$limit);
 /**
  * returnin result of topHosters
  * @param  Int $limit max count hosters in result
- * @return Object 
+ * @return Object  name and url_slug
  */
 abstract public function getTopHosters($limit);
 
