@@ -13,7 +13,7 @@ class IndexQueries extends AbstractIndexQueries{
 protected function topHosters($limit){
   $this->hosters = DB::table('hosters')
   ->join('raitings','hosters.hoster_id','=','raitings.hoster_id')
-  ->select('name','hosters.hoster_id')
+  ->select('name')
   ->orderBy('rait')
   ->limit($limit)
   ->get();
@@ -24,7 +24,7 @@ protected function topHostersByRegion($region,$limit){
   $this->hosters = DB::table('hosters')
   ->join('raitings','hosters.hoster_id','=','raitings.hoster_id')
   ->join('regions','regions.id','=','hosters.region')
-  ->select('name','hosters.hoster_id')
+  ->select('name')
   ->where('regions.region','=',$region)
   ->orderBy('rait')
   ->limit($limit)
@@ -34,7 +34,7 @@ protected function topHostersByRegion($region,$limit){
 
 protected function topHostersByKind($kind,$limit){
   $this->hosters = DB::table('types_of_hostings')
-  ->select('hosters.name', 'hosters.hoster_id')
+  ->select('hosters.name')
   ->join('hosters','types_of_hostings.hoster_id','=','hosters.hoster_id')
   ->join('kind_of_hostings','types_of_hostings.kind_of_hosting_id','=','kind_of_hostings.kind_id')
   ->join('raitings','raitings.hoster_id','=','hosters.hoster_id')
