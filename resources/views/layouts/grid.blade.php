@@ -16,9 +16,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-3">@section('left')@show</div>
-    <div class="col">center</div>
-    <div class="col-3">right</div>
+    {{-- left column with top hosters blocks --}}
+    <div class="col-3">@include('layouts.parts.sides.left_column')</div>
+    <div class="col">@section('main_content')@show</div>
+    <div class="col-3">@include('layouts.parts.sides.right_column')</div>
   </div>
 </div>
   {{-- footer--}}
