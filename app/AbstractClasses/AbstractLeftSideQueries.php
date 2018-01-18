@@ -3,7 +3,7 @@ namespace App\AbstractClasses;
 /**
  * Abstract queries to DB placed here
  */
-abstract class AbstractIndexQueries{
+abstract class AbstractLeftSideQueries{
   /**
  * list of hosters
  * @var Object

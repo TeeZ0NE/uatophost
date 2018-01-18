@@ -2,13 +2,13 @@
 namespace App\Queries;
 use Illuminate\Support\Facades\DB;
 use App\Models\Hoster;
-use App\AbstractClasses\AbstractIndexQueries;
+use App\AbstractClasses\AbstractLeftSideQueries;
 /**
  * Here is main logic for working with DB
  *
  * Class make some methods for working with database and models
 */
-class IndexQueries extends AbstractIndexQueries{
+class LeftSideQueries extends AbstractLeftSideQueries{
 
 protected function topHosters($limit){
   $this->hosters = DB::table('hosters')
