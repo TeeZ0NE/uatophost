@@ -20,12 +20,12 @@
   </button>
   <a class="navbar-brand" href="#"><span class="ico-logo-ua-top-host d-md-block d-lg-none"></span></a>
   <div class="collapse navbar-collapse justify-content-center" id="nav_bar_main">
-    <a class="nav-link active" href="#">@lang('menu.main_page')</a>
-    <a class="nav-link" href="#">@lang('menu.hosters_rate')</a>
+    <a class="nav-link active" href="{{ route('main_page') }}">@lang('menu.main_page')</a>
+    <a class="nav-link" href="{{ route('top-10') }}">@lang('menu.hosters_rate')</a>
     <a class="nav-link" href="#">@lang('menu.virtual_rate')</a>
     <a class="nav-link" href="#">@lang('menu.compare_hosters')</a>
     <a class="nav-link" href="#">@lang('menu.vpsvds_rate')</a>
     <a class="nav-link" href="#">@lang('menu.blog')</a>
-    <a class="nav-link" href="#">@lang('menu.promotions')</a>
+    <a class="nav-link" href="{{ route('promotions') }}">@lang('menu.promotions')</a>
   </div>
 </nav>

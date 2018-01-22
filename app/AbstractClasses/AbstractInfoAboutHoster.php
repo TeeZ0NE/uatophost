@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
  *
  * get info for hoster page
  */
-abstract class InfoAboutHoster extends Controller{
+abstract class AbstractInfoAboutHoster extends Controller{
 /**
  * using for searchin hoster's info in DB using icolumn url_slug  in hosters table
  * @var String
@@ -29,6 +29,16 @@ protected $hoster_id;
  * @var Object
  */
 protected $hoster;
+/**
+ * object with name and caption about types and kinds
+ * @var Object
+ */
+protected $types_kinds;
+/**
+ * all promotions for all hosters
+ * @var Object
+ */
+protected $all_promotions;
 /**
  * getting info from database
  * @param  String $hoster_url_slug hoster's url_slug
@@ -53,5 +63,30 @@ abstract protected function getRegion($hoster_id);
  * @return Json            getting regions with array where locate servers, if applicable, expl - "ru":["Moscow","Kyiv"]
  */
 abstract protected function getLocations($hoster_id);
+/**
+ * getting from database types (tarif name) and kind (vps, shared)
+ *
+ * join with table kind_of_hosting
+ * @param  Int $hoster_id hoster id's
+ * @return Object with 'name' and 'caption' for current hoster
+ */
+abstract protected function typesAndKindsHostings($hoster_id);
+/**
+ * return into view
+ * @param  Int $hoster_id hoster id's
+ * @return Object  with 'name' and 'caption'
+ */
+abstract public function getTypesAndKindsHostings($hoster_id);
+/**
+ * get promotion(s) hoster
+ * @param  Int $hoster_id hoster id's
+ * @return Object 
+ */
+abstract protected function promotions($hoster_id);
+/**
+ * return all hosters if slug is empty
+ * @return Object hoser's name and url slug
+ */
+abstract protected function hosters();
 
 }

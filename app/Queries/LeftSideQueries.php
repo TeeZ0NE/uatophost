@@ -13,8 +13,8 @@ class LeftSideQueries extends AbstractLeftSideQueries{
 protected function topHosters($limit){
   $this->hosters = DB::table('hosters')
   ->join('raitings','hosters.hoster_id','=','raitings.hoster_id')
-  ->select('name','url_slug')
-  ->orderBy('rait')
+  ->select('name','url_slug','rait')
+  ->orderBy('rait','desc')
   ->limit($limit)
   ->get();
   return $this->hosters;
@@ -38,22 +38,22 @@ protected function topHostersByKind($kind,$limit){
   ->join('hosters','types_of_hostings.hoster_id','=','hosters.hoster_id')
   ->join('kind_of_hostings','types_of_hostings.kind_of_hosting_id','=','kind_of_hostings.kind_id')
   ->join('raitings','raitings.hoster_id','=','hosters.hoster_id')
-  ->where('kind_of_hostings.caption','=',$kind)
+  ->where('kind_of_hostings.url_slug','=',$kind)
   ->orderBy('rait')
   ->limit($limit)
   ->get();
   return $this->hosters;
 }
-public function getTopHosters($limit=10){
+public function getTopHosters($limit=NULL){
   $this->hosters= $this->topHosters($limit);
   return $this->hosters;
 }
 
-public function getTopHostersByRegion($region="UK",$limit=10){
+public function getTopHostersByRegion($region,$limit=NULL){
   $this->hosters = $this->topHostersByRegion($region,$limit);
   return $this->hosters;
 }
-public function getTopHostersByKind($kind='vps',$limit=5){
+public function getTopHostersByKind($kind,$limit=NULL){
   $this->hosters=$this->topHostersByKind($kind,$limit);
   return $this->hosters;
 }
