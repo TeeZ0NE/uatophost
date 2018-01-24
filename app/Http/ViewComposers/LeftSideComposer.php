@@ -3,7 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use Illuminate\Contracts\View\View;
-use App\Queries\LeftSideQueries as LeftSide;
+use App\Queries\Queries as LeftSide;
 
 class LeftSideComposer
 {

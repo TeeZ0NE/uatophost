@@ -13,4 +13,6 @@ yarn-error.log
 .phpintel/
 npm-debug.log.*
 resources/assets/sql/*
+public/images/*
+resources/views/tests/*
 

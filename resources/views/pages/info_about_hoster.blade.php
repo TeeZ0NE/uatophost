@@ -21,8 +21,8 @@
   </thead>
   <tbody>
     <tr><th scope="row">name</th><td>{{ $hoster_main_info->name }}</td></tr>
-    <tr><th scope="row">site</th><td>{{ $hoster_main_info->site }}</td></tr>
-    <tr><th scope="row">logo</th><td>{{ $hoster_main_info->logo }}</td></tr>
+    <tr><th scope="row">site</th><td><a href="{{ $hoster_main_info->site }}" target="_blank">{{ $hoster_main_info->site }}</a></td></tr>
+    <tr><th scope="row">logo</th><td><img src="{{ url('/img/hosters_logo/'.$hoster_main_info->logo) }}"></td></tr>
     <tr><th scope="row">joined</th><td>{{ $hoster_main_info->joined }}</td></tr>
     <tr><th scope="row">raiting</th><td>{{ $raiting }}</td></tr>
     <tr><th scope="row">where hoster from</th><td>{{ $region }}</td></tr>

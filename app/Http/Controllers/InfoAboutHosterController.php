@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\AbstractClasses\AbstractInfoAboutHoster;
 use App\Models\Hoster as Hoster;
-use Exception;
+// use Exception;
 use Illuminate\Support\Facades\DB;
 /**
  * Here are all information about hoster to user

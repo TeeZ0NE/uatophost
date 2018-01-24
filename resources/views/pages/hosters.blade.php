@@ -5,6 +5,7 @@
 @section('keywords','myKeyWords to hoster info')
 @section('main_content')
 
+<h1>top hosters</h1>
 @empty ($hosters[0])
 @component('layouts.parts.components.alert',[
   'error_text'=>'Nothing found',

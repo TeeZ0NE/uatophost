@@ -22,9 +22,9 @@
   <div class="collapse navbar-collapse justify-content-center" id="nav_bar_main">
     <a class="nav-link active" href="{{ route('main_page') }}">@lang('menu.main_page')</a>
     <a class="nav-link" href="{{ route('top-10') }}">@lang('menu.hosters_rate')</a>
-    <a class="nav-link" href="#">@lang('menu.virtual_rate')</a>
+    <a class="nav-link" href="{{ route('top-by-kind',['kind'=>'shared']) }}">@lang('menu.virtual_rate')</a>
     <a class="nav-link" href="#">@lang('menu.compare_hosters')</a>
-    <a class="nav-link" href="#">@lang('menu.vpsvds_rate')</a>
+    <a class="nav-link" href="{{ route('servers') }}">@lang('menu.vpsvds_rate')</a>
     <a class="nav-link" href="#">@lang('menu.blog')</a>
     <a class="nav-link" href="{{ route('promotions') }}">@lang('menu.promotions')</a>
   </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Queries\LeftSideQueries as LeftSide;
+use App\Queries\Queries as LeftSide;
 
 class LeftSideGetHosters extends Controller
 {
