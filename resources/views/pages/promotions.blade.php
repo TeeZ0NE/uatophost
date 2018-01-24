@@ -4,6 +4,8 @@
 @section('description','myDescription to hoster promotions')
 @section('keywords','myKeyWords to hoster promotions')
 @section('main_content')
+
+<h1>Promotions</h1>
 <table class="table table-striped">
   <tbody>
     @foreach ($all_promotions as $promotion)

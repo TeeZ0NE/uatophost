@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\AbstractClasses\AbstractPromotions;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class PromotionController extends AbstractPromotions
