@@ -2,13 +2,13 @@
 namespace App\Queries;
 use Illuminate\Support\Facades\DB;
 use App\Models\Hoster;
-use App\AbstractClasses\AbstractLeftSideQueries;
+use App\AbstractClasses\AbstractQueries;
 /**
  * Here is main logic for working with DB
  *
  * Class make some methods for working with database and models
 */
-class LeftSideQueries extends AbstractLeftSideQueries{
+class Queries extends AbstractQueries{
 
 protected function topHosters($limit){
   $this->hosters = DB::table('hosters')
@@ -24,9 +24,9 @@ protected function topHostersByRegion($region,$limit){
   $this->hosters = DB::table('hosters')
   ->join('raitings','hosters.hoster_id','=','raitings.hoster_id')
   ->join('regions','regions.id','=','hosters.region')
-  ->select('name','url_slug')
+  ->select('name','url_slug','rait')
   ->where('regions.region','=',$region)
-  ->orderBy('rait')
+  ->orderBy('rait','desc')
   ->limit($limit)
   ->get();
   return $this->hosters;
@@ -34,12 +34,12 @@ protected function topHostersByRegion($region,$limit){
 
 protected function topHostersByKind($kind,$limit){
   $this->hosters = DB::table('types_of_hostings')
-  ->select('hosters.name','hosters.url_slug')
+  ->select('hosters.name','hosters.url_slug','rait')
   ->join('hosters','types_of_hostings.hoster_id','=','hosters.hoster_id')
   ->join('kind_of_hostings','types_of_hostings.kind_of_hosting_id','=','kind_of_hostings.kind_id')
   ->join('raitings','raitings.hoster_id','=','hosters.hoster_id')
   ->where('kind_of_hostings.url_slug','=',$kind)
-  ->orderBy('rait')
+  ->orderBy('rait','desc')
   ->limit($limit)
   ->get();
   return $this->hosters;
